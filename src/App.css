@@ -1,0 +1,44 @@
+.App {
+  max-width: 600px;
+  margin: auto;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-square {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.color-palette-slide {
+  display: inline-block;
+  padding: 5px;
+  width: calc(50% - 30px);
+  margin: 0 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.color-item {
+  font-size: 20px;
+}
+
+input {
+  float: right;
+}
+
+strong {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 599px) {
+  .App {
+    margin: 0 10px;
+  }
+}
