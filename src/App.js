@@ -55,9 +55,10 @@ class App extends Component {
     if ((this.state.color1 && this.state.color2) &&
         (this.state.color1.length >= 4 && this.state.color2.length >= 4)) {
       const { color1, color2 } = this.state;
-      const doesMeet = contrast(color1, color2) >= 4.5 ? '' : 'do not ';
+      const meetsWcag = contrast(color1, color2) >= 4.5;
+      const doesMeet = meetsWcag ? '' : 'do not ';
       const message = `Your colours ${doesMeet}meet the WCAG colour contrast ratio of 4.5:1`;
-      return <p>{message}</p>;
+      return <p style={{ color: meetsWcag ? 'green' : 'red' }}>{message}</p>;
     }
   }
 
